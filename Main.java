@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main {
+class Main
 {   
    public static void main(String[] args) 
    {  
@@ -8,8 +8,16 @@ class Main {
       int gallonsNeeded;
       int extraQuartsNeeded;
       Scanner input = new Scanner(System.in);
-      System.out.print("Enter quarts needed >> ");
-      quartsNeeded = input.nextInt();
+     for(int x=0; x==0; x++){
+       try{
+         System.out.print("Enter quarts needed >> ");
+         quartsNeeded = input.nextInt();
+       }
+       catch(Exception error){
+         input.nextLine();
+         x--;
+       }
+     }
       gallonsNeeded = quartsNeeded / QUARTS_IN_GALLON;
       extraQuartsNeeded = quartsNeeded % QUARTS_IN_GALLON;
       System.out.println("A job that needs " + quartsNeeded +
