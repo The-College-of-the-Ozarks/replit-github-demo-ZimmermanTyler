@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 class Main
 {   
    public static void main(String[] args) 
@@ -13,7 +13,7 @@ class Main
          System.out.print("Enter quarts needed >> ");
          quartsNeeded = input.nextInt();
        }
-       catch(Exception error){
+       catch(InputMismatchException error){
          input.nextLine();
          x--;
        }
